@@ -1,0 +1,942 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAB Jaya Abadi Bersama - Distributor AC</title>
+<meta name="keywords" content="Jaya Abadi Bersama, JAB, Sparepart AC, Suku Cadang AC, Distributor Sparepart AC">
+<meta name="author" content="JAB">
+<meta name="generator" content="FA 2025">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&400&subset=latin&display=swap" rel="stylesheet">
+<link href="css/JAB.css" rel="stylesheet">
+<link href="css/Index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wwb20.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      var navigationMenu_dropdownToggle = document.querySelectorAll('#navigationMenu .dropdown-toggle');
+      navigationMenu_dropdownToggle.forEach(item => 
+      {
+         var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
+      });
+      var navigationMenu_dropdown = document.querySelectorAll('#navigationMenu .dropdown');
+      navigationMenu_dropdown.forEach(item => 
+      {
+         item.addEventListener('shown.bs.dropdown', function(e)
+         {
+            e.currentTarget.classList.add('show');
+         });
+         item.addEventListener('hidden.bs.dropdown', function(e)
+         {
+            e.currentTarget.classList.remove('show');
+         });
+      });
+      document.addEventListener('click', function (e)
+      {
+         var isChildOfDropdownMenu = false;
+         var target = e.target;
+         while (target !== null)
+         {
+            if (target.classList && target.classList.contains('navigationMenu-navbar-collapse') && target.classList.contains('show'))
+            {
+               isChildOfDropdownMenu = true;
+               break;
+            }
+            target = target.parentNode;
+         }
+         if (isChildOfDropdownMenu)
+         {
+            if (e.target.tagName.toLowerCase() === 'a' && !e.target.classList.contains('dropdown-toggle'))
+            {
+               const dropdownMenu = document.querySelector('.navigationMenu-navbar-collapse');
+               if (dropdownMenu)
+               {
+                  const collapseInstance = bootstrap.Collapse.getInstance(dropdownMenu);
+                  if (collapseInstance)
+                  {
+                     collapseInstance.hide();
+                  }
+               }
+            }
+         }
+      });
+      var elementCarousel1 = document.querySelector('#Carousel1');
+      elementCarousel1.addEventListener('slid.bs.carousel', function(e)
+      {
+         switch(e.to)
+         {
+            case 0:
+               AnimateCss('wb_welcomeText1', 'slide-left-in', 300, 1000);
+               AnimateCss('wb_welcomeText2', 'slide-right-in', 1000, 1000);
+               AnimateCss('welcomeButton1', 'swash-in', 2000, 1000);
+               break;
+            case 1:
+               AnimateCss('wb_welcomeText3', 'scale-in-horizontal-center', 300, 1000);
+               AnimateCss('wb_welcomeText4', 'scale-in-vertical-center', 1000, 1000);
+               AnimateCss('welcomeButton2', 'twister-down-in', 2000, 1000);
+               break;
+            case 2:
+               AnimateCss('wb_welcomeText5', 'transform-rotate-in', 300, 1000);
+               AnimateCss('welcomeButton3', 'vanish-in', 2000, 1000);
+               break;
+            case 5:
+               AnimateCss('wb_welcomeText6', 'transform-roll-in', 1000, 1000);
+               break;
+         }
+      });
+      var Carousel1 = new bootstrap.Carousel('#Carousel1', {interval: 6000, pause: false});
+      var elementattractionsCarousel = document.querySelector('#attractionsCarousel');
+      elementattractionsCarousel.addEventListener('slid.bs.carousel', function(e)
+      {
+         switch(e.to)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+            case 2:
+               $('#Carousel2').bootstrapcarousel(1);
+               break;
+         }
+      });
+      var attractionsCarousel = new bootstrap.Carousel('#attractionsCarousel', {interval: 0, pause: false});
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#wb_todoCards').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#wb_contactText3').addClass('visibility-hidden');
+      $('#wb_todoCard1').addClass('visibility-hidden');
+      $('#wb_todoCard2').addClass('visibility-hidden');
+      $('#wb_todoCard3').addClass('visibility-hidden');
+      $('#wb_todoCard4').addClass('visibility-hidden');
+      $('#wb_Image1').addClass('visibility-hidden');
+      $('#wb_Image2').addClass('visibility-hidden');
+      $('#wb_Image3').addClass('visibility-hidden');
+      $('#wb_Image4').addClass('visibility-hidden');
+      $('#wb_Image5').addClass('visibility-hidden');
+      $('#InlineFrame1').addClass('visibility-hidden');
+      $('#wb_Text2').addClass('visibility-hidden');
+      $('#wb_Image6').addClass('visibility-hidden');
+      $("a[href*='#todoCards']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_todoCards').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrolltodoCards()
+      {
+         var $obj = $("#wb_todoCards");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_todoCards', 'animate-fade-in-up', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_todoCards', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_todoCards').inViewPort(true))
+      {
+         $('#wb_todoCards').addClass("in-viewport");
+      }
+      onScrolltodoCards();
+      $(window).scroll(function(event)
+      {
+         onScrolltodoCards();
+      });
+      $("a[href*='#galleryLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollgalleryLayoutGrid()
+      {
+         var $obj = $("#wb_galleryLayoutGrid");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollgalleryLayoutGrid();
+      $(window).scroll(function(event)
+      {
+         onScrollgalleryLayoutGrid();
+      });
+      $("#reviewsContainer").owlCarousel({autoplayTimeout:5000, smartSpeed: 500, margin: 13, autoplay: true, nav: false, loop: true, dots: true, items: 1, slideBy: 1});
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      function onScrollcontactText3()
+      {
+         var $obj = $("#wb_contactText3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_contactText3', 'slide-right-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_contactText3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_contactText3').inViewPort(true))
+      {
+         $('#wb_contactText3').addClass("in-viewport");
+      }
+      onScrollcontactText3();
+      $(window).scroll(function(event)
+      {
+         onScrollcontactText3();
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      function onScrolltodoCard1()
+      {
+         var $obj = $("#wb_todoCard1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_todoCard1', 'slide-left-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_todoCard1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_todoCard1').inViewPort(true))
+      {
+         $('#wb_todoCard1').addClass("in-viewport");
+      }
+      onScrolltodoCard1();
+      $(window).scroll(function(event)
+      {
+         onScrolltodoCard1();
+      });
+      function onScrolltodoCard2()
+      {
+         var $obj = $("#wb_todoCard2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_todoCard2', 'animate-fade-in-up', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_todoCard2', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_todoCard2').inViewPort(true))
+      {
+         $('#wb_todoCard2').addClass("in-viewport");
+      }
+      onScrolltodoCard2();
+      $(window).scroll(function(event)
+      {
+         onScrolltodoCard2();
+      });
+      function onScrolltodoCard3()
+      {
+         var $obj = $("#wb_todoCard3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_todoCard3', 'animate-fade-in-up', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_todoCard3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_todoCard3').inViewPort(true))
+      {
+         $('#wb_todoCard3').addClass("in-viewport");
+      }
+      onScrolltodoCard3();
+      $(window).scroll(function(event)
+      {
+         onScrolltodoCard3();
+      });
+      function onScrolltodoCard4()
+      {
+         var $obj = $("#wb_todoCard4");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_todoCard4', 'slide-right-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_todoCard4', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_todoCard4').inViewPort(true))
+      {
+         $('#wb_todoCard4').addClass("in-viewport");
+      }
+      onScrolltodoCard4();
+      $(window).scroll(function(event)
+      {
+         onScrolltodoCard4();
+      });
+      function onScrollImage1()
+      {
+         var $obj = $("#wb_Image1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image1', 'slide-up-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image1').inViewPort(true))
+      {
+         $('#wb_Image1').addClass("in-viewport");
+      }
+      onScrollImage1();
+      $(window).scroll(function(event)
+      {
+         onScrollImage1();
+      });
+      function onScrollImage2()
+      {
+         var $obj = $("#wb_Image2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image2', 'slide-left-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image2', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image2').inViewPort(true))
+      {
+         $('#wb_Image2').addClass("in-viewport");
+      }
+      onScrollImage2();
+      $(window).scroll(function(event)
+      {
+         onScrollImage2();
+      });
+      function onScrollImage3()
+      {
+         var $obj = $("#wb_Image3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image3', 'slide-down-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image3').inViewPort(true))
+      {
+         $('#wb_Image3').addClass("in-viewport");
+      }
+      onScrollImage3();
+      $(window).scroll(function(event)
+      {
+         onScrollImage3();
+      });
+      function onScrollImage4()
+      {
+         var $obj = $("#wb_Image4");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image4', 'slide-right-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image4', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image4').inViewPort(true))
+      {
+         $('#wb_Image4').addClass("in-viewport");
+      }
+      onScrollImage4();
+      $(window).scroll(function(event)
+      {
+         onScrollImage4();
+      });
+      function onScrollImage5()
+      {
+         var $obj = $("#wb_Image5");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image5', 'slide-down-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image5', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image5').inViewPort(true))
+      {
+         $('#wb_Image5').addClass("in-viewport");
+      }
+      onScrollImage5();
+      $(window).scroll(function(event)
+      {
+         onScrollImage5();
+      });
+      function onScrollInlineFrame1()
+      {
+         var $obj = $("#InlineFrame1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('InlineFrame1', 'animate-fade-in-up', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('InlineFrame1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#InlineFrame1').inViewPort(true))
+      {
+         $('#InlineFrame1').addClass("in-viewport");
+      }
+      onScrollInlineFrame1();
+      $(window).scroll(function(event)
+      {
+         onScrollInlineFrame1();
+      });
+      function onScrollText2()
+      {
+         var $obj = $("#wb_Text2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Text2', 'slide-down-in', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Text2', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Text2').inViewPort(true))
+      {
+         $('#wb_Text2').addClass("in-viewport");
+      }
+      onScrollText2();
+      $(window).scroll(function(event)
+      {
+         onScrollText2();
+      });
+      function onScrollImage6()
+      {
+         var $obj = $("#wb_Image6");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image6', 'animate-fade-in-down', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image6', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image6').inViewPort(true))
+      {
+         $('#wb_Image6').addClass("in-viewport");
+      }
+      onScrollImage6();
+      $(window).scroll(function(event)
+      {
+         onScrollImage6();
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_navigationImage" style="display:inline-block;width:190px;height:51px;z-index:0;">
+                  <a href="./Index.html"><img src="images/logo jab only.png" id="navigationImage" alt="" width="190" height="52"></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <nav id="wb_navigationMenu" style="display:block;width:100%;text-align:center;z-index:1;">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <div class="navbar-header">
+                           <button title="" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navigationMenu-navbar-collapse">
+                              <span class="line"></span>
+                              <span class="line"></span>
+                              <span class="line"></span>
+                           </button>
+                        </div>
+                        <div class="navigationMenu-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="nav-item">
+                                 <a href="#welcome" class="nav-link btn">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#planTrip" class="nav-link btn">Company Profile</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#galleryHeading" class="nav-link btn">Produk</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#kursus" class="nav-link btn">Kursus</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#contact" class="nav-link btn">Hubungi</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Carousel1">
+                  <div id="Carousel1" class="carousel slide" data-bs-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-bs-target="#Carousel1" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#Carousel1" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#Carousel1" data-bs-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="carousel-item-inner">
+                              <div id="wb_welcomeText1">
+                                 <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">JAYA ABADI BERSAMA</span></p>
+                              </div>
+                              <div id="wb_welcomeText2">
+                                 <p>Solusi Lengkap Sparepart AC Anda</p>
+                              </div>
+                              <input type="submit" id="welcomeButton1" name="" value="Hubungi kami" style="display:inline-block;width:141px;height:37px;z-index:4;">
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-item-inner">
+                              <div id="wb_welcomeText3">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">BERKUALITAS</span></p>
+                              </div>
+                              <div id="wb_welcomeText4">
+                                 <p>Suku Cadang AC Kualitas Terbaik, Harga Bersaing</p>
+                              </div>
+                              <a id="welcomeButton2" href="#contact" style="display:inline-block;width:141px;height:37px;z-index:7;">Hubungi kami</a>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-item-inner">
+                              <div id="wb_welcomeText5">
+                                 <p style="font-size:21px;line-height:24.5px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">TERPERCAYA</span></p>
+                              </div>
+                              <div id="wb_welcomeText6">
+                                 <p>Mitra Terpercaya untuk Kebutuhan Sparepart AC Anda</p>
+                              </div>
+                              <input type="submit" id="welcomeButton3" name="" value="Hubungi kami" style="display:inline-block;width:141px;height:37px;z-index:10;">
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-item-start carousel-control" href="#Carousel1" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-item-end carousel-control" href="#Carousel1" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_todoCards">
+      <div id="todoCards">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_todoCard1" style="display:flex;width:100%;z-index:12;" class="card">
+                     <div id="todoCard1-card-body">
+                        <div id="todoCard1-card-item0"><i class="fa fa-clock-o"></i></div>
+                        <div id="todoCard1-card-item1">PENGALAMAN</div>
+                        <div id="todoCard1-card-item2">Melayani lebih dari 30 tahun</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_todoCard2" style="display:flex;width:100%;z-index:13;" class="card">
+                     <div id="todoCard2-card-body">
+                        <div id="todoCard2-card-item0"><i class="fa fa-money"></i></div>
+                        <div id="todoCard2-card-item1">KOMPETITIF</div>
+                        <div id="todoCard2-card-item2">Harga terbaik untuk anda</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_todoCard3" style="display:flex;width:100%;z-index:14;" class="card">
+                     <div id="todoCard3-card-body">
+                        <div id="todoCard3-card-item0"><i class="fa fa-cubes"></i></div>
+                        <div id="todoCard3-card-item1">LENGKAP</div>
+                        <div id="todoCard3-card-item2">Distributor sparepart AC terlengkap</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_todoCard4" style="display:flex;width:100%;z-index:15;" class="card">
+                     <div id="todoCard4-card-body">
+                        <div id="todoCard4-card-item0"><i class="fa fa-thumbs-o-up"></i></div>
+                        <div id="todoCard4-card-item1">AHLI</div>
+                        <div id="todoCard4-card-item2">Dukungan penuh tim teknisi tersertifikasi</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_planTripHeading" style="display:block;width:100%;z-index:16;">
+                  <h2 id="planTripHeading">Company Profile</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_banner">
+      <div id="banner-overlay"></div>
+      <div id="banner">
+         <div class="col-1">
+         </div>
+         <div class="col-2">
+            <div id="wb_Image2" style="display:block;width:100%;height:auto;z-index:17;">
+               <img src="images/logo boston white.png" id="Image2" alt="" width="131" height="53">
+            </div>
+         </div>
+         <div class="col-3">
+            <div id="wb_Image3" style="display:block;width:100%;height:auto;z-index:18;">
+               <img src="images/logo-nichiro.png" id="Image3" alt="" width="131" height="82">
+            </div>
+         </div>
+         <div class="col-4">
+            <div id="wb_Image1" style="display:block;width:100%;height:auto;z-index:19;">
+               <img src="images/logo-cparts-white.png" id="Image1" alt="" width="131" height="60">
+            </div>
+         </div>
+         <div class="col-5">
+            <div id="wb_Image5" style="display:block;width:100%;height:auto;z-index:20;">
+               <img src="images/logo-superking.png" id="Image5" alt="" width="131" height="44">
+            </div>
+         </div>
+         <div class="col-6">
+            <div id="wb_Image4" style="display:block;width:100%;height:auto;z-index:21;">
+               <img src="images/logo-uts.png" id="Image4" alt="" width="131" height="72">
+            </div>
+         </div>
+         <div class="col-7">
+         </div>
+      </div>
+   </div>
+   <div id="wb_attractions">
+      <div id="attractions">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_attractionsCarousel">
+                     <div id="attractionsCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                           <li data-bs-target="#attractionsCarousel" data-bs-slide-to="0" class="active"></li>
+                           <li data-bs-target="#attractionsCarousel" data-bs-slide-to="1"></li>
+                           <li data-bs-target="#attractionsCarousel" data-bs-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-item-inner">
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-2">
+                              <div class="carousel-item-inner">
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-3">
+                              <div class="carousel-item-inner">
+                                 <div id="wb_attractionsText3" class="caption">
+                                    <p style="font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">XXXX</span></p>
+                                    <p><span style="font-size:15px;line-height:16.5px;">Teks tambahan</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-item-start carousel-control" href="#attractionsCarousel" role="button" data-bs-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-end carousel-control" href="#attractionsCarousel" role="button" data-bs-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_attractionsText1">
+                     <p style="margin:0 0 10.67px 0;">Berdiri sejak tahun 1991, <span style="font-weight:bold;">Jaya Abadi Bersama (JAB)</span> merupakan pionir dalam industri penyediaan komponen otomotif di Indonesia. Berawal sebagai pelopor manufaktur dan penjualan <span style="font-style:italic;">nepel</span>, <span style="font-style:italic;">joint</span>, dan <span style="font-style:italic;">fitting</span> berbahan aluminium, kuningan, tembaga, serta besi, JAB kini telah berkembang menjadi pemimpin pasar yang dipercaya dalam solusi sistem pendingin kendaraan.</p>
+                  </div>
+                  <a id="tombolcompro" href="./compro.html" style="display:inline-block;width:141px;height:37px;z-index:25;">Selengkapnya</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_map">
+      <div id="map">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_video_map_indo" style="display:block;width:100%;height:auto;z-index:26;">
+                  <video id="video_map_indo" poster="MAP INDOnesia.mp4" autoplay loop muted><source src="MAP INDOnesia.mp4" type="video/mp4"></video>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_gallery">
+      <div id="gallery">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_galleryHeading" style="display:block;width:100%;z-index:27;">
+                  <h2 id="galleryHeading">Produk</h2>
+               </div>
+               <div id="wb_Heading3" style="display:block;width:100%;z-index:28;">
+                  <h2 id="Heading3">Kami menyediakan semua kebutuhan sparepart AC mobil anda</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_galleryLayoutGrid">
+      <div id="galleryLayoutGrid">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_Image6" style="display:block;width:100%;height:auto;z-index:29;">
+                     <img src="images/Banner cpart promosi 20260108-1200px.png" srcset="images/Banner cpart promosi 20260108-1200px.png" id="Image6" alt="" width="940" height="288">
+                  </div>
+                  <a id="tombolGallery" href="#" style="display:inline-block;width:194px;height:37px;z-index:30;">Lihat semua produk</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_kursus">
+      <div id="kursus">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading1" style="display:block;width:100%;z-index:31;">
+                  <h2 id="Heading1">Kursus Spesialis AC Mobil</h2>
+               </div>
+               <div id="wb_Heading2" style="display:block;width:100%;z-index:32;">
+                  <h2 id="Heading2">Siap kerja dan siap buka usaha !</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_kursus3">
+      <div id="kursus3">
+         <div class="col-1">
+         </div>
+         <div class="col-2">
+            <div id="wb_Text2">
+               <span style="color:#FFFFFF;font-family:'Open Sans';font-size:16px;">Apakah anda sedang mencari kursus otomotif dengan biaya terjangkau namun kualitas premium? <br>JAB Surabaya hadir memberikan solusi pelatihan terbaik untuk Anda.<br><br>Kami membuka program pelatihan AC Mobil Intensif dengan sistem yang unik: <br><strong>Sedikit Teori, Praktek Sepuasnya!</strong></span>
+            </div>
+            <a id="Button1" href="./kursus.html" style="display:inline-block;width:170px;height:37px;z-index:34;">Pelajari lebih lanjut</a>
+         </div>
+         <div class="col-3">
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviews">
+      <div id="reviews">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_reviewsHeading" style="display:block;width:100%;z-index:35;">
+                  <h2 id="reviewsHeading">Testimoni</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviewsContainer">
+      <div id="reviewsContainer" class="owl-carousel owl-theme">
+         <div id="wb_reviewsCard2" style="display:flex;z-index:36;" class="card">
+            <div id="reviewsCard2-card-body">
+               <img id="reviewsCard2-card-item0" src="images/Willem-de-Zwijger.jpg" width="480" height="480" alt="" title="">
+               <div id="reviewsCard2-card-item1">Sutrisno</div>
+               <div id="reviewsCard2-card-item2">GAPA AC Medan</div>
+               <div id="reviewsCard2-card-item3"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="reviewsCard2-card-item4"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="reviewsCard2-card-item5"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="reviewsCard2-card-item6"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="reviewsCard2-card-item7"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="reviewsCard2-card-item8">Tulis bebas bla bla bla bla</div>
+            </div>
+         </div>
+         <div id="wb_Card1" style="display:flex;z-index:37;" class="card">
+            <div id="Card1-card-body">
+               <img id="Card1-card-item0" src="images/Willem-de-Zwijger.jpg" width="480" height="480" alt="" title="">
+               <div id="Card1-card-item1">Toni Lee</div>
+               <div id="Card1-card-item2">88 Auto AC Parts Jakarta</div>
+               <div id="Card1-card-item3"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card1-card-item4"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card1-card-item5"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card1-card-item6"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card1-card-item7"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card1-card-item8">Tulis bebas bla bla bla bla</div>
+            </div>
+         </div>
+         <div id="wb_Card2" style="display:flex;z-index:38;" class="card">
+            <div id="Card2-card-body">
+               <img id="Card2-card-item0" src="images/Meisje_met_de_parel.jpg" width="400" height="400" alt="" title="">
+               <div id="Card2-card-item1">Ali Ridho</div>
+               <div id="Card2-card-item2">Atlantis AC Semarang</div>
+               <div id="Card2-card-item3"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card2-card-item4"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card2-card-item5"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card2-card-item6"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card2-card-item7"><a href="http://"><i class="fa fa-star"></i></a></div>
+               <div id="Card2-card-item8">BLA BLA BLA BLA BLA</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading" style="display:block;width:100%;z-index:39;">
+                  <h2 id="contactHeading">Butuh informasi lebih lanjut ?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <iframe name="InlineFrame1" id="InlineFrame1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.9649362982414!2d112.73710997371633!3d-7.244830371159634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f9157a41d827%3A0xdda50aecebdceb09!2sJaya%20Abadi%20Bersama%20AC%20Mobil!5e0!3m2!1sen!2sid!4v1767682692110!5m2!1sen!2sid" loading="lazy" scrolling="no"></iframe>
+            </div>
+            <div class="col-2">
+               <div id="wb_contactText3">
+                  <p><span style="font-weight:bold;">Hubungi Kami</span></p>
+                  <br>
+                  <p>Pertokoan Sulung Mas 89 Blok D-21</p>
+                  <p>Kec. Krembangan, </p>
+                  <p>Surabaya, Jawa Timur 60175</p>
+                  <br>
+                  <p>Call <a href="tel:+6285900013071">0859 0001 3071</a></p>
+               </div>
+               <div id="wb_Icon1" style="display:inline-block;width:37px;height:53px;text-align:center;z-index:42;">
+                  <a href="https://wa.me/6285900013071"><div id="Icon1"><i class="fa fa-whatsapp"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:73;" data-250-start="opacity:1;" data-start="opacity:0;">
+      <div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:43;">
+         <a href="#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_footer" style="z-index:10000 !important;">
+      <div id="footer">
+         <div class="col-1">
+         </div>
+         <div class="col-2">
+            <div id="wb_Text1">
+               <span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © 2025 JAB Surabaya</span>
+            </div>
+         </div>
+         <div class="col-3">
+            <div id="wb_footerIcon1" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:55;">
+               <a href="https://www.youtube.com/@WijayaJAB" target="_blank"><div id="footerIcon1"><i class="fa fa-youtube-play"></i></div></a>
+            </div>
+            <div id="wb_footerIcon2" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:56;">
+               <a href="https://www.instagram.com/@wijayaJAB" target="_blank"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+            </div>
+            <div id="wb_footerIcon3" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:57;">
+               <a href="https://www.tiktok.com/@wijayajab" target="_blank"><div id="footerIcon3"><i class="fa fa-tiktok"></i></div></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
