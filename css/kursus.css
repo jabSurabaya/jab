@@ -1616,3 +1616,17 @@ body
 {
    z-index: 1111 !important;
 }
+#InlineFrame2
+{
+   box-sizing: border-box;
+   border: 1px solid #DDDDDD;
+   border-radius: 0px;
+   margin: 0;
+}
+#InlineFrame2
+{
+   display: inline-block;
+   width: 638px;
+   height: 358px;
+   vertical-align: top;
+}
