@@ -296,7 +296,7 @@ body
    height: auto;
 }
 }
-#wb_planTrip
+#wb_compro
 {
    clear: both;
    position: relative;
@@ -311,7 +311,7 @@ body
    box-sizing: border-box;
    margin: 0;
 }
-#planTrip
+#compro
 {
    box-sizing: border-box;
    padding: 40px 15px 40px 15px;
@@ -319,12 +319,12 @@ body
    margin-left: auto;
    max-width: 1024px;
 }
-#planTrip > .row
+#compro > .row
 {
    margin-right: -15px;
    margin-left: -15px;
 }
-#planTrip > .row > .col-1
+#compro > .row > .col-1
 {
    box-sizing: border-box;
    font-size: 0;
@@ -333,11 +333,11 @@ body
    padding-left: 15px;
    position: relative;
 }
-#planTrip > .row > .col-1
+#compro > .row > .col-1
 {
    float: left;
 }
-#planTrip > .row > .col-1
+#compro > .row > .col-1
 {
    background-color: transparent;
    background-image: none;
@@ -346,22 +346,22 @@ body
    width: 100%;
    text-align: center;
 }
-#planTrip:before,
-#planTrip:after,
-#planTrip .row:before,
-#planTrip .row:after
+#compro:before,
+#compro:after,
+#compro .row:before,
+#compro .row:after
 {
    display: table;
    content: " ";
 }
-#planTrip:after,
-#planTrip .row:after
+#compro:after,
+#compro .row:after
 {
    clear: both;
 }
 @media (max-width: 480px)
 {
-#planTrip > .row > .col-1
+#compro > .row > .col-1
 {
    float: none;
    width: 100%;
@@ -641,7 +641,7 @@ body
    text-align: center;
    width: 100%;
    height: 10vh;
-   background-color: #FF6C05;
+   background-color: #FF6000;
    background-image: none;
    border: 0px solid #CCCCCC;
    border-radius: 0px;
@@ -655,7 +655,7 @@ body
    padding: 10px 15px 10px 15px;
    margin-right: auto;
    margin-left: auto;
-   max-width: 1024px;
+   max-width: 1920px;
 }
 #map > .row
 {
@@ -2843,7 +2843,7 @@ body
    box-sizing: border-box;
    width: 100%;
 }
-#wb_planTripHeading
+#wb_
 {
    background-color: transparent;
    background-image: none;
@@ -2855,7 +2855,7 @@ body
    padding: 0;
    text-align: center;
 }
-#planTripHeading
+#
 {
    color: #FFFFFF;
    font-family: Arial;
@@ -3267,17 +3267,15 @@ body
 #footer
 {
    box-sizing: border-box;
-   padding: 0 15px 0 15px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 0;
    margin-right: auto;
    margin-left: auto;
    max-width: 1024px;
 }
-#footer > .row
-{
-   margin-right: -15px;
-   margin-left: -15px;
-}
-#footer > .row > .col-1
+#footer > .col-1, #footer > .col-2, #footer > .col-3
 {
    box-sizing: border-box;
    font-size: 0;
@@ -3286,38 +3284,64 @@ body
    padding-left: 15px;
    position: relative;
 }
-#footer > .row > .col-1
+#footer > .col-1, #footer > .col-2, #footer > .col-3
 {
-   float: left;
+   flex: 0 0 auto;
 }
-#footer > .row > .col-1
+#footer > .col-1
 {
    background-color: transparent;
    background-image: none;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
-   width: 100%;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: center;
    text-align: center;
 }
-#footer:before,
-#footer:after,
-#footer .row:before,
-#footer .row:after
+#footer > .col-2
 {
-   display: table;
-   content: " ";
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 50%;
+   max-width: 50%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
 }
-#footer:after,
-#footer .row:after
+#footer > .col-3
 {
-   clear: both;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-end;
+   text-align: right;
 }
 @media (max-width: 480px)
 {
-#footer > .row > .col-1
+#footer > .col-1, #footer > .col-2, #footer > .col-3
 {
-   float: none;
-   width: 100% !important;
+   flex-basis: 100% !important;
+   max-width: 100% !important;
 }
 }
 #wb_galleryHeading
@@ -4436,6 +4460,24 @@ body
    vertical-align: top;
 }
 #Image6
+{
+   border: 0px solid #000000;
+   border-radius: 0px;
+   box-sizing: border-box;
+   padding: 0;
+   display: block;
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+   object-fit: scale-down;
+}
+#wb_Image7
+{
+   height: 100%;
+   margin: 0;
+   vertical-align: top;
+}
+#Image7
 {
    border: 0px solid #000000;
    border-radius: 0px;
