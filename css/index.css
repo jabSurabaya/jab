@@ -3267,15 +3267,17 @@ body
 #footer
 {
    box-sizing: border-box;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   padding: 0;
+   padding: 0 15px 0 15px;
    margin-right: auto;
    margin-left: auto;
    max-width: 1024px;
 }
-#footer > .col-1, #footer > .col-2, #footer > .col-3
+#footer > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#footer > .row > .col-1, #footer > .row > .col-2, #footer > .row > .col-3
 {
    box-sizing: border-box;
    font-size: 0;
@@ -3284,64 +3286,56 @@ body
    padding-left: 15px;
    position: relative;
 }
-#footer > .col-1, #footer > .col-2, #footer > .col-3
+#footer > .row > .col-1, #footer > .row > .col-2, #footer > .row > .col-3
 {
-   flex: 0 0 auto;
+   float: left;
 }
-#footer > .col-1
+#footer > .row > .col-1
 {
    background-color: transparent;
    background-image: none;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
-   flex-basis: 25%;
-   max-width: 25%;
-   display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   align-self: stretch;
-   align-items: center;
-   justify-content: center;
+   width: 33.33333333%;
+   text-align: left;
+}
+#footer > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 33.33333333%;
    text-align: center;
 }
-#footer > .col-2
+#footer > .row > .col-3
 {
    background-color: transparent;
    background-image: none;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
-   flex-basis: 50%;
-   max-width: 50%;
-   display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   align-self: stretch;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-}
-#footer > .col-3
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   flex-basis: 25%;
-   max-width: 25%;
-   display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   align-self: stretch;
-   align-items: center;
-   justify-content: flex-end;
+   width: 33.33333333%;
    text-align: right;
+}
+#footer:before,
+#footer:after,
+#footer .row:before,
+#footer .row:after
+{
+   display: table;
+   content: " ";
+}
+#footer:after,
+#footer .row:after
+{
+   clear: both;
 }
 @media (max-width: 480px)
 {
-#footer > .col-1, #footer > .col-2, #footer > .col-3
+#footer > .row > .col-1, #footer > .row > .col-2, #footer > .row > .col-3
 {
-   flex-basis: 100% !important;
-   max-width: 100% !important;
+   float: none;
+   width: 100% !important;
 }
 }
 #wb_galleryHeading

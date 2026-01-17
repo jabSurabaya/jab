@@ -1370,7 +1370,7 @@ body
    height: 358px;
    vertical-align: top;
 }
-#wb_footer
+#wb_
 {
    clear: both;
    position: relative;
@@ -1385,18 +1385,20 @@ body
    box-sizing: border-box;
    margin: 0;
 }
-#footer
+#
 {
    box-sizing: border-box;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   padding: 0;
+   padding: 0 15px 0 15px;
    margin-right: auto;
    margin-left: auto;
    max-width: 1024px;
 }
-#footer > .col-1, #footer > .col-2, #footer > .col-3
+# > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+# > .row > .col-1, # > .row > .col-2, # > .row > .col-3
 {
    box-sizing: border-box;
    font-size: 0;
@@ -1405,115 +1407,59 @@ body
    padding-left: 15px;
    position: relative;
 }
-#footer > .col-1, #footer > .col-2, #footer > .col-3
+# > .row > .col-1, # > .row > .col-2, # > .row > .col-3
 {
-   flex: 0 0 auto;
+   float: left;
 }
-#footer > .col-1
+# > .row > .col-1
 {
    background-color: transparent;
    background-image: none;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
-   flex-basis: 25%;
-   max-width: 25%;
-   display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   align-self: stretch;
-   align-items: center;
-   justify-content: center;
+   width: 33.33333333%;
+   text-align: left;
+}
+# > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 33.33333333%;
    text-align: center;
 }
-#footer > .col-2
+# > .row > .col-3
 {
    background-color: transparent;
    background-image: none;
    border: 0px solid #FFFFFF;
    border-radius: 0px;
-   flex-basis: 50%;
-   max-width: 50%;
-   display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   align-self: stretch;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-}
-#footer > .col-3
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px solid #FFFFFF;
-   border-radius: 0px;
-   flex-basis: 25%;
-   max-width: 25%;
-   display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   align-self: stretch;
-   align-items: center;
-   justify-content: flex-end;
+   width: 33.33333333%;
    text-align: right;
+}
+#:before,
+#:after,
+# .row:before,
+# .row:after
+{
+   display: table;
+   content: " ";
+}
+#:after,
+# .row:after
+{
+   clear: both;
 }
 @media (max-width: 480px)
 {
-#footer > .col-1, #footer > .col-2, #footer > .col-3
+# > .row > .col-1, # > .row > .col-2, # > .row > .col-3
 {
-   flex-basis: 100% !important;
-   max-width: 100% !important;
+   float: none;
+   width: 100% !important;
 }
 }
-#wb_Icon2
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px solid #FFFFFF;
-   border-radius: 2px;
-   text-align: center;
-   margin: 0 10px 0 0 ;
-   padding: 0;
-   vertical-align: top;
-   display:inline-block;
-   position:relative;
-}
-#wb_Icon2 a
-{
-   text-decoration: none;
-}
-#wb_Icon2 a::after
-{
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   z-index: 1;
-   pointer-events: auto;
-   content: "";
-}
-#Icon2
-{
-   height: 40px;
-   width: 24px;
-   display: flex;
-   flex-wrap: nowrap;
-   justify-content: center;
-}
-#Icon2 i
-{
-   color: #FFFFFF;
-   display: inline-block;
-   font-size: 24px;
-   line-height: 40px;
-   vertical-align: middle;
-}
-#wb_Icon2:hover #Icon2 i
-{
-   color: #19A985;
-}
-#wb_Icon3
+#wb_footerIcon2
 {
    background-color: transparent;
    background-image: none;
@@ -1526,11 +1472,11 @@ body
    display:inline-block;
    position:relative;
 }
-#wb_Icon3 a
+#wb_footerIcon2 a
 {
    text-decoration: none;
 }
-#wb_Icon3 a::after
+#wb_footerIcon2 a::after
 {
    position: absolute;
    top: 0;
@@ -1541,7 +1487,7 @@ body
    pointer-events: auto;
    content: "";
 }
-#Icon3
+#footerIcon2
 {
    height: 40px;
    width: 24px;
@@ -1549,7 +1495,7 @@ body
    flex-wrap: nowrap;
    justify-content: center;
 }
-#Icon3 i
+#footerIcon2 i
 {
    color: #FFFFFF;
    display: inline-block;
@@ -1557,11 +1503,11 @@ body
    line-height: 40px;
    vertical-align: middle;
 }
-#wb_Icon3:hover #Icon3 i
+#wb_footerIcon2:hover #footerIcon2 i
 {
    color: #19A985;
 }
-#wb_Icon4
+#wb_footerIcon3
 {
    background-color: transparent;
    background-image: none;
@@ -1574,11 +1520,11 @@ body
    display:inline-block;
    position:relative;
 }
-#wb_Icon4 a
+#wb_footerIcon3 a
 {
    text-decoration: none;
 }
-#wb_Icon4 a::after
+#wb_footerIcon3 a::after
 {
    position: absolute;
    top: 0;
@@ -1589,7 +1535,7 @@ body
    pointer-events: auto;
    content: "";
 }
-#Icon4
+#footerIcon3
 {
    height: 40px;
    width: 24px;
@@ -1597,7 +1543,7 @@ body
    flex-wrap: nowrap;
    justify-content: center;
 }
-#Icon4 i
+#footerIcon3 i
 {
    color: #FFFFFF;
    display: inline-block;
@@ -1605,11 +1551,11 @@ body
    line-height: 40px;
    vertical-align: middle;
 }
-#wb_Icon4:hover #Icon4 i
+#wb_footerIcon3:hover #footerIcon3 i
 {
    color: #19A985;
 }
-#wb_Text6 
+#wb_Text1 
 {
    background-color: transparent;
    background-image: none;
@@ -1619,14 +1565,62 @@ body
    margin: 0;
    text-align: center;
 }
-#wb_Text6 div
+#wb_Text1 div
 {
    text-align: center;
 }
-#wb_Text6
+#wb_Text1
 {
    display: block;
    margin: 0;
    box-sizing: border-box;
    width: 100%;
+}
+#wb_footerIcon1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 2px;
+   text-align: center;
+   margin: 0 10px 0 0 ;
+   padding: 0;
+   vertical-align: top;
+   display:inline-block;
+   position:relative;
+}
+#wb_footerIcon1 a
+{
+   text-decoration: none;
+}
+#wb_footerIcon1 a::after
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+   pointer-events: auto;
+   content: "";
+}
+#footerIcon1
+{
+   height: 40px;
+   width: 24px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+}
+#footerIcon1 i
+{
+   color: #FFFFFF;
+   display: inline-block;
+   font-size: 24px;
+   line-height: 40px;
+   vertical-align: middle;
+}
+#wb_footerIcon1:hover #footerIcon1 i
+{
+   color: #19A985;
 }
