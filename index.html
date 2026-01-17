@@ -128,6 +128,7 @@
       $('#InlineFrame1').addClass('visibility-hidden');
       $('#wb_Text2').addClass('visibility-hidden');
       $('#wb_Image6').addClass('visibility-hidden');
+      $('#wb_Image7').addClass('visibility-hidden');
       $("a[href*='#todoCards']").click(function(event)
       {
          event.preventDefault();
@@ -500,6 +501,30 @@
       {
          onScrollImage6();
       });
+      function onScrollImage7()
+      {
+         var $obj = $("#wb_Image7");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Image7', 'transform-zoom-in-up', 0, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Image7', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image7').inViewPort(true))
+      {
+         $('#wb_Image7').addClass("in-viewport");
+      }
+      onScrollImage7();
+      $(window).scroll(function(event)
+      {
+         onScrollImage7();
+      });
    });
 </script>
 </head>
@@ -529,7 +554,7 @@
                                  <a href="#welcome" class="nav-link btn">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a href="#planTrip" class="nav-link btn">Company Profile</a>
+                                 <a href="#compro" class="nav-link btn">Company Profile</a>
                               </li>
                               <li class="nav-item">
                                  <a href="#galleryHeading" class="nav-link btn">Produk</a>
@@ -657,12 +682,12 @@
          </div>
       </div>
    </div>
-   <div id="wb_planTrip">
-      <div id="planTrip">
+   <div id="wb_compro">
+      <div id="compro">
          <div class="row">
             <div class="col-1">
-               <div id="wb_planTripHeading" style="display:block;width:100%;z-index:16;">
-                  <h2 id="planTripHeading">Company Profile</h2>
+               <div id="wb_" style="display:block;width:100%;z-index:16;">
+                  <h2 id="">Company Profile</h2>
                </div>
             </div>
          </div>
@@ -741,7 +766,7 @@
             <div class="col-2">
                <div class="col-2-padding">
                   <div id="wb_attractionsText1">
-                     <p style="margin:0 0 10.67px 0;">Berdiri sejak tahun 1991, <span style="font-weight:bold;">Jaya Abadi Bersama (JAB)</span> merupakan pionir dalam industri penyediaan komponen otomotif di Indonesia. Berawal sebagai pelopor manufaktur dan penjualan <span style="font-style:italic;">nepel</span>, <span style="font-style:italic;">joint</span>, dan <span style="font-style:italic;">fitting</span> berbahan aluminium, kuningan, tembaga, serta besi, JAB kini telah berkembang menjadi pemimpin pasar yang dipercaya dalam solusi sistem pendingin kendaraan.</p>
+                     <p style="margin:0 0 10.67px 0;">Berdiri sejak tahun 1991,&nbsp;<span style="font-weight:bold;">JAB</span> merupakan pionir dalam industri penyediaan komponen otomotif di Indonesia. Berawal sebagai pelopor manufaktur dan penjualan <span style="font-style:italic;">nepel</span>, <span style="font-style:italic;">joint</span>, dan <span style="font-style:italic;">fitting</span> berbahan aluminium, kuningan, tembaga, serta besi, JAB kini telah berkembang menjadi pemimpin pasar yang dipercaya dalam solusi sistem pendingin kendaraan.</p>
                   </div>
                   <a id="tombolcompro" href="./compro.html" style="display:inline-block;width:141px;height:37px;z-index:24;">Selengkapnya</a>
                </div>
@@ -753,8 +778,11 @@
       <div id="map">
          <div class="row">
             <div class="col-1">
-               <div id="wb_video_map_indo" style="display:block;width:100%;height:auto;z-index:25;">
+               <div id="wb_video_map_indo" style="display:none;width:100%;height:auto;z-index:25;">
                   <video id="video_map_indo" poster="MAP INDOnesia.mp4" autoplay loop muted><source src="MAP INDOnesia.mp4" type="video/mp4"></video>
+               </div>
+               <div id="wb_Image7" style="display:block;width:100%;height:auto;z-index:26;">
+                  <img src="images/map indonesia.png" id="Image7" alt="" width="940" height="375">
                </div>
             </div>
          </div>
@@ -764,10 +792,10 @@
       <div id="gallery">
          <div class="row">
             <div class="col-1">
-               <div id="wb_galleryHeading" style="display:block;width:100%;z-index:26;">
+               <div id="wb_galleryHeading" style="display:block;width:100%;z-index:27;">
                   <h2 id="galleryHeading">Produk</h2>
                </div>
-               <div id="wb_Heading3" style="display:block;width:100%;z-index:27;">
+               <div id="wb_Heading3" style="display:block;width:100%;z-index:28;">
                   <h2 id="Heading3">Kami menyediakan semua kebutuhan sparepart AC mobil anda</h2>
                </div>
             </div>
@@ -779,10 +807,10 @@
          <div class="row">
             <div class="col-1">
                <div class="col-1-padding">
-                  <div id="wb_Image6" style="display:block;width:100%;height:auto;z-index:28;">
+                  <div id="wb_Image6" style="display:block;width:100%;height:auto;z-index:29;">
                      <img src="images/Banner cpart promosi 20260108-1200px.png" srcset="images/Banner cpart promosi 20260108-1200px.png" id="Image6" alt="" width="940" height="305">
                   </div>
-                  <a id="tombolGallery" href="./produk.html" style="display:inline-block;width:194px;height:37px;z-index:29;">Lihat semua produk</a>
+                  <a id="tombolGallery" href="./produk.html" style="display:inline-block;width:194px;height:37px;z-index:30;">Lihat semua produk</a>
                </div>
             </div>
          </div>
@@ -792,10 +820,10 @@
       <div id="kursus">
          <div class="row">
             <div class="col-1">
-               <div id="wb_Heading1" style="display:block;width:100%;z-index:30;">
+               <div id="wb_Heading1" style="display:block;width:100%;z-index:31;">
                   <h2 id="Heading1">Kursus Spesialis AC Mobil</h2>
                </div>
-               <div id="wb_Heading2" style="display:block;width:100%;z-index:31;">
+               <div id="wb_Heading2" style="display:block;width:100%;z-index:32;">
                   <h2 id="Heading2">Siap kerja dan siap buka usaha !</h2>
                </div>
             </div>
@@ -810,7 +838,7 @@
             <div id="wb_Text2">
                <span style="color:#FFFFFF;font-family:'Open Sans';font-size:16px;">Apakah anda sedang mencari kursus otomotif dengan biaya terjangkau namun kualitas premium? <br>JAB Surabaya hadir memberikan solusi pelatihan terbaik untuk Anda.<br><br>Kami membuka program pelatihan AC Mobil Intensif dengan sistem yang unik: <br><strong>Sedikit Teori, Praktek Sepuasnya!</strong></span>
             </div>
-            <a id="Button1" href="./kursus.html" style="display:inline-block;width:170px;height:37px;z-index:33;">Pelajari lebih lanjut</a>
+            <a id="Button1" href="./kursus.html" style="display:inline-block;width:170px;height:37px;z-index:34;">Pelajari lebih lanjut</a>
          </div>
          <div class="col-3">
          </div>
@@ -820,7 +848,7 @@
       <div id="reviews">
          <div class="row">
             <div class="col-1">
-               <div id="wb_reviewsHeading" style="display:none;width:100%;z-index:34;">
+               <div id="wb_reviewsHeading" style="display:none;width:100%;z-index:35;">
                   <h2 id="reviewsHeading">Testimoni</h2>
                </div>
             </div>
@@ -829,7 +857,7 @@
    </div>
    <div id="wb_reviewsContainer">
       <div id="reviewsContainer" class="owl-carousel owl-theme">
-         <div id="wb_reviewsCard2" style="display:none;z-index:35;" class="card">
+         <div id="wb_reviewsCard2" style="display:none;z-index:36;" class="card">
             <div id="reviewsCard2-card-body">
                <img id="reviewsCard2-card-item0" src="images/Willem-de-Zwijger.jpg" width="480" height="480" alt="" title="">
                <div id="reviewsCard2-card-item1">Sutrisno</div>
@@ -842,7 +870,7 @@
                <div id="reviewsCard2-card-item8">Tulis bebas bla bla bla bla</div>
             </div>
          </div>
-         <div id="wb_Card1" style="display:none;z-index:36;" class="card">
+         <div id="wb_Card1" style="display:none;z-index:37;" class="card">
             <div id="Card1-card-body">
                <img id="Card1-card-item0" src="images/Willem-de-Zwijger.jpg" width="480" height="480" alt="" title="">
                <div id="Card1-card-item1">Toni Lee</div>
@@ -855,7 +883,7 @@
                <div id="Card1-card-item8">Tulis bebas bla bla bla bla</div>
             </div>
          </div>
-         <div id="wb_Card2" style="display:none;z-index:37;" class="card">
+         <div id="wb_Card2" style="display:none;z-index:38;" class="card">
             <div id="Card2-card-body">
                <img id="Card2-card-item0" src="images/Meisje_met_de_parel.jpg" width="400" height="400" alt="" title="">
                <div id="Card2-card-item1">Ali Ridho</div>
@@ -874,7 +902,7 @@
       <div id="contact">
          <div class="row">
             <div class="col-1">
-               <div id="wb_contactHeading" style="display:block;width:100%;z-index:38;">
+               <div id="wb_contactHeading" style="display:block;width:100%;z-index:39;">
                   <h2 id="contactHeading">Butuh informasi lebih lanjut ?</h2>
                </div>
             </div>
@@ -901,24 +929,35 @@
                   <br>
                   <p>Call <a href="tel:+6285900013071">0859 0001 3071</a></p>
                </div>
-               <div id="wb_Icon1" style="display:inline-block;width:37px;height:53px;text-align:center;z-index:41;">
+               <div id="wb_Icon1" style="display:inline-block;width:37px;height:53px;text-align:center;z-index:42;">
                   <a href="https://wa.me/6285900013071"><div id="Icon1"><i class="fa fa-whatsapp"></i></div></a>
                </div>
             </div>
          </div>
       </div>
    </div>
-   <div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:68;" data-250-start="opacity:1;" data-start="opacity:0;">
-      <div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:42;">
+   <div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:72;" data-250-start="opacity:1;" data-start="opacity:0;">
+      <div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:43;">
          <a href="#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
    </div>
    <div id="wb_footer" style="z-index:10000 !important;">
       <div id="footer">
-         <div class="row">
-            <div class="col-1">
-               <div id="wb_Text1">
-                  <span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © 2025 JAB Surabaya</span>
-               </div>
+         <div class="col-1">
+         </div>
+         <div class="col-2">
+            <div id="wb_Text1">
+               <span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © 2025 JAB Surabaya</span>
+            </div>
+         </div>
+         <div class="col-3">
+            <div id="wb_footerIcon1" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:54;">
+               <a href="https://www.youtube.com/@WijayaJAB" target="_blank"><div id="footerIcon1"><i class="fa fa-youtube-play"></i></div></a>
+            </div>
+            <div id="wb_footerIcon2" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:55;">
+               <a href="https://www.instagram.com/@wijayaJAB" target="_blank"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+            </div>
+            <div id="wb_footerIcon3" style="display:inline-block;width:24px;height:40px;text-align:center;z-index:56;">
+               <a href="https://www.tiktok.com/@wijayajab" target="_blank"><div id="footerIcon3"><i class="fa fa-tiktok"></i></div></a>
             </div>
          </div>
       </div>
