@@ -5386,3 +5386,56 @@ body
 {
    color: #19A985;
 }
+#wb_Card59
+{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0%;
+   align-self: auto;
+   box-sizing: border-box;
+   margin: 0;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #DDDDDD;
+   border-radius: 3px;
+   text-align: center;
+}
+#Card59-card-body
+{
+   padding: 0;
+   flex: 1 1 auto;
+   font-size: 0;
+}
+#Card59-card-item0
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0 20px;
+   padding: 0;
+   color: #333333;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   font-size: 19px;
+}
+#Card59-card-item1
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0 20px;
+   border-top: 1px #DDDDDD solid;
+   border-width: 1px 0 0 0;
+   height: 0;
+   line-height: 0;
+}
+#Card59-card-item2
+{
+   box-sizing: border-box;
+   margin: 10px 10px 10px 10px;
+   padding: 0;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   width: calc(100% - 20px);
+   height: auto;
+}
